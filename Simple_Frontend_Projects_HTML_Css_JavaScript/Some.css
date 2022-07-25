@@ -1,0 +1,59 @@
+body {
+   background-color : greenyellow;
+
+}
+H1{
+color :blue;
+}
+H2{
+color :brown;
+}
+p {
+border : 1px solid blue ;
+display : block ;
+}
+#Time{
+   color :rgb(200,100,200);
+}
+#Head{
+   color: blue;
+}
+#click{
+   color: red;
+   }
+#Start_click{
+   color: blue;
+}
+.Clock{
+   color: blueviolet;
+}
+.card-text{
+   color: green;
+}
+.text-center{
+   color: blueviolet;
+}
+
+.form-text{
+   color: brown;
+}
+#clear{
+   color: black;
+}
+
+#del{
+   color: red;
+}
+#gm{
+   float: right;
+   background-color : black;
+}
+#W{
+   height: 200px;
+   width: 500px;
+   background-color: powderblue;
+ }
+
+.card-body{
+   float:left
+}

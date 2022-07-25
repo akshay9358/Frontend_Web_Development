@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>clock</title>
+
+    <!-- Add Css and icon -->
+    <link rel = "stylesheet" type = "text/css" href = "Some1.css">
+    <link rel="icon" type="image/x-icon" href="/Aks/favicon-16x16.png">
+  </head>
+
+<!-- Get Template from Bootstrap -->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <h1 class="Clock" href="#">Real Time Clock </h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item1">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+              <li class="nav-item2">
+                <a class="nav-link active "aria-current="page" href="#">Help</a>
+              </li>
+              <li class="nav-item3">
+                <a class="nav-link disabled"aria-current="page" >Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container my-4">
+        <h2 class="card-text">Here I have created a clock </h2>
+            <h1> Current Time : <span id="Time"></span></h1>
+            <button id="Stop_click">Stop clock</button>
+            <div class="card" id = 'W' style="width: 18rem;">
+                <img src="Aks/apple-touch-icon.png" , class="card-img-top" alt="NOt found">
+                <button id="Start_click">Start clock</button>
+            </div>
+        </div>
+
+              <script>
+                // Global variables
+                let a;  // for both date and time
+                let d; // for date
+                let t; // for time
+
+                function clock(a,d,t){
+                  // Set Intervals
+                  Interval = setInterval(() => {
+                    a = new Date(); // get both date and time
+                    console.log("a",a)
+                    d = a.toDateString()  // get only date 
+                    console.log(d)
+                    // get time as hours-minutes-seconds format
+                    t = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds()
+                    // Show this time and date
+                    ele = document.getElementById("Time") 
+                    ele.innerHTML = t + "<br> on " + d; 
+                }, 1000);
+                return Interval
+                }
+                // Call above function to start clock
+                Interval = clock(a,d,t)
+
+                // For stoping the Clock on clicking 
+                ele0 = document.getElementById("Stop_click")
+                ele0.addEventListener("click", function () {
+                    clearInterval(Interval) // clear all 
+                    console.log("Time stopped")
+                });
+
+                // For starting the Clock on clicking 
+                ele1 = document.getElementById("Start_click")
+                ele1.addEventListener("click", function () {
+                    console.log("Time started")
+                    Interval = clock(a,d,t)
+                });
+
+            </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+</html>

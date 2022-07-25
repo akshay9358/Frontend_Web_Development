@@ -1,0 +1,5 @@
+1	Coding	Solve a hard question	
+2	NSS	Write Essay before 21 April	
+3	PRML	Study for exam	
+4	Convex	Do research for Project	
+5	Linear Optimization	Do assignment - 1
